@@ -1,7 +1,7 @@
 from datetime import datetime
 
-class medicao():
-    def __init__(self, id, matparticulado, ozonio, mono_carbono, oxi_nitroso, data: datetime ):
+class Medicao():
+    def __init__(self, id, matparticulado, ozonio, mono_carbono, oxi_nitroso, data ):
         self.__id = id 
         self.__matparticulado = matparticulado
         self.__ozonio = ozonio
@@ -39,14 +39,18 @@ class medicao():
     def set_oxi_nitroso(self, oxi_nitroso):
         self.__oxi_nitroso = oxi_nitroso
 
+    def get_data(self):
+        return self.__data
 
-    def toDict(self):
+    def set_data(self, data):
+        self.__data = data
+
+    def toDict(self) -> dict:
         return {
             "id": self.__id,
             "ozonio": self.__ozonio,
-            "material_particulado": self.__matparticulado,
-            "monoxido_carbono": self.__mono_carbono,
-            "oxido_nitroso": self.__oxi_nitroso,
-            "data": self.__data.strftime('%d/%m/%Y %H:%M')
-
+            "matparticulado": self.__matparticulado,
+            "mono_carbono": self.__mono_carbono,
+            "oxi_nitroso": self.__oxi_nitroso,
+            "data": self.__data
         }
