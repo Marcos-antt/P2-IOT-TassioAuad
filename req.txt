@@ -1,0 +1,2 @@
+AR = ozônio, material particulado, monóxido de carbono, dióxido de enxofre e óxido
+nitroso
